@@ -109,7 +109,7 @@ body {
 }
 .App > div .elems .data_element {
   display: grid;
-  grid-template-columns: 40px 30% auto;
+  grid-template-columns: 40px 40% auto;
   background-color: #a8dadc;
   padding: 8px 15px;
   border-radius: 10px;
