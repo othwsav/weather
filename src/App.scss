@@ -1,0 +1,186 @@
+$red: #e63946;
+$white: #f1faee;
+$blue1: #a8dadc;
+$blue2: #457b9d;
+$blue3: #1d3557;
+$br: 10px;
+$brw: 3px;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+}
+body{
+    font-size: 1.2em;
+}
+
+.credit{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    position: fixed;
+    bottom: 20px;
+    color: $blue3;
+    left: calc(50% - 110px);
+    width: 220px;
+    background-color: $white;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: $br;
+    border: $brw solid $blue3;
+    font-weight: 700;
+    a{
+        color: $blue2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 20px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.App{
+    background-color: $blue3;
+    max-width: 600px;
+    min-width: 400px;
+    width: 85vw;
+    padding: 30px;
+    margin: 50px auto 100px;
+    border-radius: $br;
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-gap: 20px;
+    form{
+        display: grid;
+        grid-template-columns: 55% auto;
+        input, button{
+            height: 100%;
+            transition: all .4s;
+            outline: none;
+            border: none;
+            font-size: inherit;
+            font-weight: 700;
+            border: $brw solid transparent;
+        }
+        input{
+            background-color: $white;
+            border-radius: $br 0 0 $br;
+            padding: 10px 15px;
+            &:focus{
+                border-color: $blue1;
+            }
+        }
+        button{
+            border-radius: 0 $br $br 0;
+            background-color: $blue1;
+            cursor: pointer;
+            &:hover{
+                background-color: $blue3;
+                color: $white;
+                border-color: $white;
+            }
+        }
+    }
+    &>div{
+        .icon{
+            display: grid;
+            grid-template-columns: 80% auto;
+            // justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: $white;
+            border-radius: $br;
+            height: 75px;
+            border: $brw solid $blue1;
+            color: $blue3;
+            padding: 0 15px;
+            span{
+                font-weight: 700;
+                font-size: 1.1em;
+                text-transform: uppercase;
+            }
+            div{
+                justify-self: center;
+                width: 50px;
+                display: flex;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .elems{
+            display: grid;
+            grid-gap: 20px;
+            .data_element{
+                display: grid;
+                grid-template-columns: 40px 30% auto;
+                background-color: $blue1;
+                padding: 8px 15px;
+                border-radius: $br;
+                height: 60px;
+                grid-gap: 10px;
+                align-items: center;
+                span:first-child{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+                span:nth-child(2){
+                    text-transform: capitalize;
+                    font-weight: 500;
+                }
+                span:last-child{
+                    justify-self: flex-end;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .error{
+            color: $white;
+            text-align: center;
+            font-weight: 700;
+            background-color: $red;
+            border-radius: $br;
+            padding: 20px 0;
+            font-size: 1.1em;
+            border: $brw solid $white;
+            text-transform: uppercase;
+        }
+    }
+    .loading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 50px;
+        &>div{
+            background-color: $white;
+            padding: 15px;
+            width: 55px;
+            box-sizing: content-box;
+            border-radius: $br;
+            border: $brw solid $blue1;
+        }
+        img{
+            width: 100%;
+            animation-name: rotating;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(.84,.84,.56,1)
+        }
+    }
+}
+
+@keyframes rotating{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

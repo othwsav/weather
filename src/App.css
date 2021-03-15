@@ -1,38 +1,177 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand";
+}
+
+body {
+  font-size: 1.2em;
+}
+
+.credit {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  position: fixed;
+  bottom: 20px;
+  color: #1d3557;
+  left: calc(50% - 110px);
+  width: 220px;
+  background-color: #f1faee;
   text-align: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 3px solid #1d3557;
+  font-weight: 700;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.credit a {
+  color: #457b9d;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.credit a img {
+  width: 20px;
+  margin-right: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  background-color: #1d3557;
+  max-width: 600px;
+  min-width: 400px;
+  width: 85vw;
+  padding: 30px;
+  margin: 50px auto 100px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 50px auto;
+  grid-gap: 20px;
+}
+.App form {
+  display: grid;
+  grid-template-columns: 55% auto;
+}
+.App form input, .App form button {
+  height: 100%;
+  transition: all 0.4s;
+  outline: none;
+  border: none;
+  font-size: inherit;
+  font-weight: 700;
+  border: 3px solid transparent;
+}
+.App form input {
+  background-color: #f1faee;
+  border-radius: 10px 0 0 10px;
+  padding: 10px 15px;
+}
+.App form input:focus {
+  border-color: #a8dadc;
+}
+.App form button {
+  border-radius: 0 10px 10px 0;
+  background-color: #a8dadc;
+  cursor: pointer;
+}
+.App form button:hover {
+  background-color: #1d3557;
+  color: #f1faee;
+  border-color: #f1faee;
+}
+.App > div .icon {
+  display: grid;
+  grid-template-columns: 80% auto;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f1faee;
+  border-radius: 10px;
+  height: 75px;
+  border: 3px solid #a8dadc;
+  color: #1d3557;
+  padding: 0 15px;
+}
+.App > div .icon span {
+  font-weight: 700;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+.App > div .icon div {
+  justify-self: center;
+  width: 50px;
+  display: flex;
+}
+.App > div .icon div img {
+  width: 100%;
+}
+.App > div .elems {
+  display: grid;
+  grid-gap: 20px;
+}
+.App > div .elems .data_element {
+  display: grid;
+  grid-template-columns: 40px 30% auto;
+  background-color: #a8dadc;
+  padding: 8px 15px;
+  border-radius: 10px;
+  height: 60px;
+  grid-gap: 10px;
+  align-items: center;
+}
+.App > div .elems .data_element span:first-child {
+  display: block;
+}
+.App > div .elems .data_element span:first-child img {
+  width: 100%;
+}
+.App > div .elems .data_element span:nth-child(2) {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.App > div .elems .data_element span:last-child {
+  justify-self: flex-end;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.App > div .error {
+  color: #f1faee;
+  text-align: center;
+  font-weight: 700;
+  background-color: #e63946;
+  border-radius: 10px;
+  padding: 20px 0;
+  font-size: 1.1em;
+  border: 3px solid #f1faee;
+  text-transform: uppercase;
+}
+.App .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+}
+.App .loading > div {
+  background-color: #f1faee;
+  padding: 15px;
+  width: 55px;
+  box-sizing: content-box;
+  border-radius: 10px;
+  border: 3px solid #a8dadc;
+}
+.App .loading img {
+  width: 100%;
+  animation-name: rotating;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.84, 0.84, 0.56, 1);
 }
 
-@keyframes App-logo-spin {
-  from {
+@keyframes rotating {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+
+/*# sourceMappingURL=App.css.map */
