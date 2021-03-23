@@ -4,6 +4,7 @@ import Form from './components/Form'
 import Weather from './components/Weather'
 import Load from './components/Load'
 
+
 class App extends Component {
 	state = {
 		wheatherVals : [
@@ -59,8 +60,8 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Form get={this.getWeather}/>
-				{(this.state.loading)? <Load/> : <Weather wev={this.state.wheatherVals} wen={this.state.wheatherNames} icon={this.state.iconUrl} error={this.state.error}/>}
-				
+				{(this.state.loading)? <Load/> : <Weather wev={this.state.wheatherVals} wen={this.state.wheatherNames} icon={this.state.iconUrl} error={this.state.error}/>
+				}
 			</div>
 		)
 	}

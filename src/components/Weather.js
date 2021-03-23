@@ -2,10 +2,11 @@ import React from 'react'
 
 const Weather = props => {
 
-    const {wev,wen,icon,error} = props
 
+    const {wev,wen,icon,error} = props
+    
     let wElem, wElems, iconElem, errorElem
-    console.log(error);
+    
     if(error === false){
         wElems = wen.map((e,i) => {
             return  <div key={i} className="data_element">

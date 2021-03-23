@@ -14,16 +14,15 @@ $brw: 3px;
 }
 body{
     font-size: 1.2em;
+    background-color: $white
 }
 
 .credit{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
-    position: fixed;
-    bottom: 20px;
+    margin: 20px auto;
     color: $blue3;
-    left: calc(50% - 110px);
     width: 220px;
     background-color: $white;
     text-align: center;
@@ -49,7 +48,7 @@ body{
     min-width: 400px;
     width: 85vw;
     padding: 30px;
-    margin: 50px auto 100px;
+    margin: 20px auto;
     border-radius: $br;
     display: grid;
     grid-template-rows: 50px auto;
