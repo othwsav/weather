@@ -6,7 +6,12 @@
 
 body {
   font-size: 1.2em;
-  background-color: #f1faee;
+  background: linear-gradient(90deg, #457b9d, #a8dadc);
+  min-height: 100vh;
+}
+
+#root {
+  padding: 30px 0 0;
 }
 
 .credit {
@@ -40,7 +45,7 @@ body {
   min-width: 400px;
   width: 85vw;
   padding: 30px;
-  margin: 20px auto;
+  margin: auto;
   border-radius: 10px;
   display: grid;
   grid-template-rows: 50px auto;
@@ -112,9 +117,10 @@ body {
   background-color: #a8dadc;
   padding: 8px 15px;
   border-radius: 10px;
-  height: 60px;
   grid-gap: 10px;
   align-items: center;
+  border: 3px solid transparent;
+  transition: all 0.5s;
 }
 .App > div .elems .data_element span:first-child {
   display: block;
@@ -130,6 +136,11 @@ body {
   justify-self: flex-end;
   font-weight: 700;
   text-transform: capitalize;
+}
+.App > div .elems .data_element:hover {
+  color: white;
+  background: #1d3557;
+  border-color: white;
 }
 .App > div .error {
   color: #f1faee;

@@ -14,7 +14,12 @@ $brw: 3px;
 }
 body{
     font-size: 1.2em;
-    background-color: $white
+    background: linear-gradient(90deg, $blue2, $blue1);
+    min-height: 100vh;
+}
+
+#root{
+    padding: 30px 0 0;
 }
 
 .credit{
@@ -48,7 +53,7 @@ body{
     min-width: 400px;
     width: 85vw;
     padding: 30px;
-    margin: 20px auto;
+    margin: auto;
     border-radius: $br;
     display: grid;
     grid-template-rows: 50px auto;
@@ -120,9 +125,11 @@ body{
                 background-color: $blue1;
                 padding: 8px 15px;
                 border-radius: $br;
-                height: 60px;
+                // height: 60px;
                 grid-gap: 10px;
                 align-items: center;
+                border: $brw solid transparent;
+                transition: all .5s;
                 span:first-child{
                     display: block;
                     img{
@@ -137,6 +144,11 @@ body{
                     justify-self: flex-end;
                     font-weight: 700;
                     text-transform: capitalize;
+                }
+                &:hover{
+                    color: white;
+                    background: $blue3;
+                    border-color: white;
                 }
             }
         }
